@@ -1,0 +1,219 @@
+/*
+    I followed the SMACSS CSS Architecture:
+    Base -- includes styles for basic HTML elements
+    Layout -- includes styles for specific parts of the layout
+    Modules -- includes styles for classes, these are reusable and combinable
+    State -- includes styles related to changes in state
+
+*/
+
+/**************************
+Base Styles
+***************************/
+body {
+    max-width: 95%;
+    display: grid;
+    color: #253b56;
+    background-color: #cbdff8;
+    font-family: 'EB Garamond', serif;
+    line-height: 150%;
+}
+
+h1, h2, h3 {
+    font-family: 'Marck Script', cursive;
+}
+
+h1{
+    font-size: 75px;
+    margin: 20px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #253b56;
+}
+
+header {
+    display: grid;
+    padding-bottom: 5px;
+    border-bottom: 2px solid#253b56;
+}
+
+main {
+    display: grid;
+    max-width: 960px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+footer ul {
+    text-align: left;
+    margin-left: 40%;
+}
+
+form {
+    width:90%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    border: 2px solid #253b56;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 2px #253b56;
+}
+
+section h2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-decoration: underline;
+    text-align: center;
+}
+
+section figure {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+section p {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-right: 20px;
+}
+
+section h3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: center;
+}
+
+section ul {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+/**************************
+Layout Styles
+***************************/
+
+#logo {
+    grid-column: 1/2;
+}
+
+#signup {
+    font-family: 'Marck Script', cursive;
+    border: 5px double white;
+    background-color: #253b56;
+    border-radius: 50px;
+    grid-column: 4/5;
+    margin: 25px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-top: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#icons img {
+    width: 100%;
+    box-shadow: 0px 0px 5px 2px #253b56;
+}
+
+#info {
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+    padding-top: 42px;
+    border: 5px double white;
+    background-color: #253b56;
+    color: white;
+    border-radius: 50px;
+    font-size: 40px;
+    grid-column: 4/5;
+}
+
+#bottom {
+    display: grid;
+}
+
+#weak {
+    grid-column: 1/2;
+    font-family: 'Marck Script', cursive;
+    text-align: center;
+    margin: 25px;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 40px 20px white;
+}
+
+#icons {
+    text-align: center;
+}
+
+/**************************
+Modules Styles
+***************************/
+
+.center {
+    text-align: center;
+}
+
+.mk {
+    background-color: #d494ff;
+}
+
+.ep {
+    background-color: #94c6ff;
+}
+
+.hs {
+    background-color: #ffbb94;
+}
+
+.ak {
+    background-color: #adff94;
+}
+
+.intro {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+}
+/**************************
+State Styles
+***************************/
+#signup:hover{
+    background-color: white;
+    border-color: #253b56;
+    color: #253b56;
+}
+
+#info:hover{
+    background-color: white;
+    border-color: #253b56;
+    color: #253b56;
+}
