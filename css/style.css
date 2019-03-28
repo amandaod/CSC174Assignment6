@@ -49,13 +49,6 @@ header {
     border-bottom: 2px solid#253b56;
 }
 
-main {
-    display: grid;
-    max-width: 960px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 footer {
     margin-top: 50px;
@@ -69,6 +62,7 @@ footer ul {
 }
 
 form {
+    grid-column: 1;
     width:90%;
     max-width: 500px;
     margin-left: auto;
@@ -144,6 +138,7 @@ Layout Styles
 }
 
 #info {
+    grid-row: 1;
     font-family: 'Marck Script', cursive;
     text-align: center;
     padding-top: 42px;
@@ -160,7 +155,7 @@ Layout Styles
 }
 
 #weak {
-    grid-column: 1/2;
+    grid-column: 4;
     font-family: 'Marck Script', cursive;
     text-align: center;
     margin: 25px;
@@ -177,7 +172,13 @@ Layout Styles
 /**************************
 Modules Styles
 ***************************/
-
+.info {
+    display: grid;
+    max-width: 960px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .center {
     text-align: center;
 }
@@ -203,6 +204,9 @@ Modules Styles
     grid-row: 1/2;
     text-align: center;
 }
+.original-proj {
+    text-decoration: underline;
+}
 /**************************
 State Styles
 ***************************/
@@ -216,4 +220,20 @@ State Styles
     background-color: white;
     border-color: #253b56;
     color: #253b56;
+}
+
+#welcome {
+    
+    font-family: 'Marck Script', cursive;
+    border: 5px double white;
+    background-color: #253b56;
+    border-radius: 50px;
+    margin: 25px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-top: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
 }

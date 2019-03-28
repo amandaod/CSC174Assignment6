@@ -4,7 +4,7 @@
 
 <?php include "inc/heading.inc"; ?>
 
-<main>
+<main class = "info">
     <section class="mk">
         <h2>Magic Kingdom</h2>
         <figure>
