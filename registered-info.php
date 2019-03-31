@@ -4,6 +4,18 @@
 
 <?php include "inc/heading.inc"; ?>
 
+<?php
+//all the form processing shenanigans
+include('connect-db.php');
+
+$id = $_POST['id'];
+$firstname = mysqli_real_escape_string($connection, htmlspecialchars($_POST['firstName']));
+$lastname = mysqli_real_escape_string($connection, htmlspecialchars($_POST['lastName']));
+$email = mysqli_real_escape_string($connection, htmlspecialchars($_POST['email']));
+
+$result = mysqli_query($connection, "INSERT INTO emails (firstname, lastname, email) VALUES ('$firstname', '$lastname', '$email')");
+?>
+
 <main class = "info">
     <h2 id="welcome">Thank you for signing up! Here are some of the theme parks in our newsletter: </h2>
     <section class="mk-reg">
