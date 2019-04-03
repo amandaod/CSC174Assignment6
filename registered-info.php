@@ -2,18 +2,20 @@
 
 <title>Walt Disney World Information | Park Information</title>
 
-<?php include "inc/heading.inc"; ?>
+</head>
+
+<body>
+
+<header>
+    <h1><a href="index.php" id="logo"><img src="images/logo.jpg" alt="Disney World Logo"></a></h1>
+    <a href="info.php" id="signup">Read About the Disney Parks!</a>
+</header>
 
 <?php
 //all the form processing shenanigans
 include('connect-db.php');
 
-$id = $_POST['id'];
-$firstname = mysqli_real_escape_string($connection, htmlspecialchars($_POST['firstName']));
-$lastname = mysqli_real_escape_string($connection, htmlspecialchars($_POST['lastName']));
-$email = mysqli_real_escape_string($connection, htmlspecialchars($_POST['email']));
-
-$result = mysqli_query($connection, "INSERT INTO emails (firstname, lastname, email) VALUES ('$firstname', '$lastname', '$email')");
+include('insert.php');
 ?>
 
 <main class = "info">
